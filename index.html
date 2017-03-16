@@ -47,7 +47,8 @@
 						<h2>The rendering context</h2>
 						<br>
 						<pre><code class="hljs" data-trim contenteditable>
-							var canvas = document.getElementById('canvas')
+							var canvas = document.getElementById('canvas');
+							var ctx = canvas.getContext('2d');
 						</code></pre>
 					</section>
 					<section>
@@ -170,7 +171,7 @@
 							createLinearGradient(x1, y1, x2, y2);
 							createRadialGradient(x1, y1, r1, x2, y2, r2);
 						</code></pre>
-						<pre class="fragment"><code class="hljs" data-trim contenteditable>
+						<pre><code class="fragment" data-trim contenteditable>
 							gradient.addColorStop(position, color);
 						</code></pre>
 						<a class="fragment" href="https://jsfiddle.net/ogutm6Lu/3/" target="_blank"><img width="448" height="191" data-src="./img/color4.png"></a>
@@ -230,15 +231,7 @@ img.onload = function() {
 						<br>
 						<a href="https://jsfiddle.net/ogutm6Lu/7/" target="_blank"><img width="546" height="204" data-src="./img/transform1.png"></a>
 					</section>
-					<section>
-						<h3>Transforms</h3>
-						<br>
-						<ul>
-							<li>transform(a, b, c, d, e, f);</li>
-							<li>setTransform(a, b, c, d, e, f);</li>
-							<li>resetTransform();</li>
-						</ul>
-					</section>
+
 				</section>
 
 				<section>
@@ -248,7 +241,7 @@ img.onload = function() {
 					<section>
 						<h2>Basic animation steps</h2>
 						<ol>
-							<li>Clear the canvas</li>
+							<li>Clear the canvas - clearRect()</li>
 							<li>Save the canvas state</li>
 							<li>Draw animated shapes</li>
 							<li>Restore the canvas state</li>
@@ -262,7 +255,7 @@ img.onload = function() {
 							<li>setTimeout(function, delay)</li>
 							<li>requestAnimationFrame(callback)</li>
 						</ul>
-						<p><a href="./animation.html" target="_blank">Example</a></p>
+						<p><a href="https://jsfiddle.net/ogutm6Lu/8/" target="_blank">Example</a></p>
 					</section>
 				</section>
 				<section>
